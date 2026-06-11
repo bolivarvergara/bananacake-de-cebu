@@ -4,7 +4,7 @@
   "outputDirectory": "public",
   "functions": {
     "api/index.php": {
-      "runtime": "vercel-php@0.6.0"
+      "runtime": "vercel-php"
     }
   },
   "routes": [
@@ -20,6 +20,7 @@
   "env": {
     "APP_ENV": "production",
     "APP_DEBUG": "true",
+    "APP_KEY": "PASTE_YOUR_ACTUAL_BASE64_KEY_HERE",
     "DB_CONNECTION": "none",
     "LOG_CHANNEL": "syslog",
     "VIEW_COMPILED_PATH": "/tmp",
