@@ -15,8 +15,5 @@
       "src": "/(.*)",
       "dest": "api/index.php"
     }
-  ],
-  "includeFiles": [
-    "public/**"
   ]
 }
