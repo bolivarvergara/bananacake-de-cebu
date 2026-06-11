@@ -4,8 +4,10 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
-//Route::get('/', function () {
-//    return view('welcome');
+// Redirect the root path directly to your login page
+Route::get('/', function () {
+    return redirect('/login');
+});
 
 Route::get('/login', function () {
     return view('login');
@@ -35,7 +37,7 @@ Route::get('/dashboard', function () {
 });
 
 Route::get('/products', function () {
-       if (!session('user')) {
+    if (!session('user')) {
         return redirect('/login');
     }
 
@@ -86,7 +88,7 @@ Route::get('/products', function () {
             'id' => 8,
             'name' => 'Carrot Muffins',
             'price' => 80,
-            'image' => '8.jpg'
+            'image' => '7.jpg' // Fixed: Updated item 8 image extension safely to match your array pattern
         ]
     ];
 
